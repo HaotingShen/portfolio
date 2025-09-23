@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+/* Theme tokens for light by default */
+@theme {
+  --color-base: #ffffff;            /* light background */
+  --color-surface: #f6f7fb;         /* light card */
+  --color-accentA: #22D3EE;         /* teal */
+  --color-accentB: #A78BFA;         /* purple */
+  --color-text: #0b1020;            /* dark text on light */
+  --color-muted: #4b5563;           /* gray-600-ish */
+
+  --shadow-soft: 0 10px 30px rgba(0,0,0,0.12);
+  --radius-2xl: 1rem;
+
+  /* light-mode adaptive surfaces */
+  --border-soft: color-mix(in oklab, var(--color-text) 14%, transparent);
+  --border-strong: color-mix(in oklab, var(--color-text) 24%, transparent);
+  --chip-bg: color-mix(in oklab, var(--color-text) 6%, transparent);
+  --chip-theme-bg: color-mix(in oklab, white 0%, transparent);
+  --chip-title-bg: color-mix(in oklab, var(--color-text) 8%, transparent);
+  --chip-bg-hover: color-mix(in oklab, var(--color-text) 10%, transparent);
+}
+
+/* Dark overrides */
+.dark {
+  --color-base: #0B1020;
+  --color-surface: #101726;
+  --color-accentA: #22D3EE;
+  --color-accentB: #A78BFA;
+  --color-text: #E5E7EB;
+  --color-muted: #9CA3AF;
+
+  --shadow-soft: 0 10px 30px rgba(0,0,0,0.35);
+
+  /* Dark-mode adaptive surfaces */
+  --border-soft: color-mix(in oklab, white 14%, transparent);
+  --border-strong: color-mix(in oklab, white 24%, transparent);
+  --chip-bg: color-mix(in oklab, white 6%, transparent);
+  --chip-theme-bg: color-mix(in oklab, white 0%, transparent);
+  --chip-title-bg: color-mix(in oklab, white 8%, transparent);
+  --chip-bg-hover: color-mix(in oklab, white 10%, transparent);
+}
+
+:root { color-scheme: light; }
+.dark { color-scheme: dark; }
+
+html, body, #root { height: 100%; }
+body { @apply bg-base text-text antialiased; }
+
+:focus-visible {
+  outline: 2px solid var(--color-accentA);
+  outline-offset: 2px;
+}
+
+@layer utilities {
+  /* subtle borders */
+  .ui-border { border-color: var(--border-soft) !important; }
+  .ui-border-strong { border-color: var(--border-strong) !important; }
+
+  /* chips & outline buttons used in navbar/hero etc. */
+  .ui-chip { background-color: var(--chip-bg) !important; }
+  .ui-chip-hover:hover { background-color: var(--chip-bg-hover) !important; }
+  .ui-chip-title { background-color: var(--chip-title-bg) !important; }
+
+  .ui-theme-btn {
+    @apply inline-flex items-center gap-2 rounded-2xl px-3 py-1.5 transition;
+    background-color: var(--chip-theme-bg);
+  }
+  .ui-theme-btn:hover {
+    background-color: var(--chip-bg-hover);
+  }
+  .ui-outline-btn {
+    @apply inline-flex items-center gap-2 rounded-2xl px-3 py-1.5 transition;
+    border: 1px solid var(--border-soft);
+    background-color: var(--chip-bg);
+  }
+  .ui-outline-btn:hover {
+    background-color: var(--chip-bg-hover);
+    border-color: var(--border-strong);
+  }
+
+  .ui-btn-card {
+    @apply inline-flex items-center gap-2 rounded-2xl px-3 py-1.5 transition;
+    background-color: color-mix(in oklab, var(--color-surface) 60%, transparent);
+    border: 1px solid var(--border-soft);
+  }
+  .ui-btn-card:hover {
+    background-color: color-mix(in oklab, var(--color-surface) 80%, transparent);
+    border-color: var(--border-strong);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  }
+
+  .ui-btn-accA:hover {
+    color: var(--color-accentA);
+    /* border-color: var(--color-accentA); */
+  }
+  .ui-btn-accB:hover {
+    color: var(--color-accentB);
+    /* border-color: var(--color-accentB); */
+  }
+
+  .ui-badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-1 text-xs;
+    border: 1px solid var(--border-soft);
+    background-color: color-mix(in oklab, var(--color-text) 3%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
