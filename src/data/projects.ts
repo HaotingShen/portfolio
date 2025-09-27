@@ -1,5 +1,7 @@
 import type { Project } from '@/components/ProjectCard'
 
+const base = import.meta.env.BASE_URL;
+
 export const projects: Project[] = [
   {
     title: 'Roco Kingdom Team Builder App',
@@ -20,7 +22,7 @@ export const projects: Project[] = [
       // website: 'https://your-live-site.example/roco-kingdom-team-builder'
     },
     tags: ['Full-stack', 'Game tools'],
-    cover: '/covers/roco.png'
+    cover: `${base}covers/roco.png`
   },
   {
     title: 'FrogHire.ai — Job Search Extension',
@@ -40,7 +42,7 @@ export const projects: Project[] = [
       website: 'https://chromewebstore.google.com/detail/froghireai-h1b-sponsor-ch/jabnaledogdghdbckajlnbipcdicinom'
     },
     tags: ['Backend', 'NLP', 'Extension'],
-    cover: '/covers/froghire.png'
+    cover: `${base}covers/froghire.png`
   },
   {
     title: 'Bolland International Website',
@@ -60,7 +62,7 @@ export const projects: Project[] = [
       website: 'https://www.bolland-intl.com/'
     },
     tags: ['Frontend', 'Prod'],
-    cover: '/covers/bolland.png'
+    cover: `${base}covers/bolland.png`
   },
   {
     title: 'Dog Encyclopedia Website',
@@ -101,6 +103,6 @@ export const projects: Project[] = [
     },
     tags: ['Backend', 'Java'],
     // cover: 'https://images.unsplash.com/photo-1543286386-2e659306cd6c?q=80&w=1600&auto=format&fit=crop'
-    cover: '/covers/bankcli.png'
+    cover: `${base}covers/bankcli.png`
   }
 ]
