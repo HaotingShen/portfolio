@@ -26,7 +26,7 @@ export default function ProjectCard(p: Project){
       className="group rounded-2xl bg-surface/60 border border-white/10 p-0 shadow-soft hover:shadow-lg hover:shadow-black/40 transition overflow-hidden"
     >
       {p.cover && (
-        <div className="relative h-60 w-full overflow-hidden">
+        <div className="relative h-80 w-full overflow-hidden">
           <img
             src={p.cover}
             alt={p.title}
@@ -57,7 +57,7 @@ export default function ProjectCard(p: Project){
           ))}
         </ul>
 
-        <div className="mt-3 flex flex-wrap gap-2 text-xs">
+        <div className="mt-4 flex flex-wrap gap-2 text-xs">
           {p.stack.map(s => (
             <span key={s} className="ui-badge">{s}</span>
           ))}
