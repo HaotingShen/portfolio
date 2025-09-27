@@ -1,69 +1,29 @@
-# React + TypeScript + Vite
+# 🌐 Haoting Shen – Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, production-ready portfolio showcasing my projects, skills, and experience.  
+Built with **React, TypeScript, Vite, Tailwind CSS, and Framer Motion**, designed for speed, accessibility, and clean UX.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🎨 **Modern UI:** Responsive design with dark/light theme toggle
+- ⚡ **Fast Builds:** Powered by Vite + React 18
+- 🌀 **Animations:** Smooth transitions via Framer Motion
+- 📂 **Projects Section:** Project cards with covers, tags, impact, and bullet points
+- 📖 **About Section:** Bio with structured frontend, backend, and deployment skills
+- 📬 **Contact Section:** Direct Gmail compose link + GitHub + LinkedIn
+- 🌌 **Background Effects:** Aurora-style gradient layers with motion
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+**Frontend**
+- [React 18](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/) bundler
+- [Tailwind CSS](https://tailwindcss.com/) for styling
+- [Framer Motion](https://www.framer.com/motion/) for animations
+- [Lucide Icons](https://lucide.dev/) for SVG icons
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+**Infrastructure**
+- GitHub Pages for deployment
+- GitHub Actions CI/CD for automatic builds & deploys
