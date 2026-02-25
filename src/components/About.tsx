@@ -16,10 +16,11 @@ export default function About() {
           transition={{ duration: 0.28 }}
           className="mt-4 text-muted md:text-lg leading-relaxed"
         >
-          I'm a recent Computer Science graduate from Washington University in St. Louis with a strong focus on backend and full-stack development.
-          I have experience designing and implementing scalable, microservices-based backends and building responsive, SEO-friendly web applications for companies.
-          I've led the development of FrogHire.ai, a job-search Chrome extension with 40,000+ active users.
-          I bring a combination of backend engineering expertise, cloud infrastructure experience, and strong problem-solving skills to every project.
+          I'm a recent CS graduate from Washington University in St. Louis, focused on backend development and AI engineering.
+          Most recently, I interned at Eth Tech building a RAG-based knowledge assistant with LangChain and OpenAI over 500+
+          internal documents, deployed on AWS ECS Fargate. I've also shipped FrogHire.ai — a job-search Chrome extension with
+          40,000+ active users, built SEO-optimized websites for companies, and worked on full-stack production apps on AWS.
+          I bring a combination of backend engineering, LLM integration, and cloud infrastructure expertise to every project.
         </motion.p>
 
         {/* Skills grid */}
@@ -40,10 +41,11 @@ export default function About() {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-1">Backend</h3>
+            <h3 className="font-semibold mb-1">Backend &amp; AI</h3>
             <ul className="space-y-1 text-muted text-sm">
               <li>FastAPI (Python), Node.js</li>
-              <li>PostgreSQL, MySQL</li>
+              <li>PostgreSQL, MySQL, Redis</li>
+              <li>LangChain, RAG, OpenAI APIs</li>
               <li>REST APIs, Auth, Caching</li>
             </ul>
           </div>
@@ -52,8 +54,8 @@ export default function About() {
             <h3 className="font-semibold mb-1">Deployment &amp; Infrastructure</h3>
             <ul className="space-y-1 text-muted text-sm">
               <li>Docker, CI/CD (GitHub Actions)</li>
-              <li>AWS (S3, EC2, DynamoDB)</li>
-              <li>Nginx/CDN</li>
+              <li>AWS (EC2, ECS, S3, RDS, CloudFront)</li>
+              <li>CloudWatch, IAM</li>
             </ul>
           </div>
         </motion.div>

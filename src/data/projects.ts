@@ -7,22 +7,26 @@ export const projects: Project[] = [
     title: 'Roco Kingdom Team Builder App',
     year: '2025',
     timeframe: 'June 2025 - Present (Open Source)',
-    stack: ['React', 'TypeScript', 'FastAPI', 'PostgreSQL', 'Pytest', 'Playwright', 'Docker', 'GitHub Actions'],
-    impact: 
-      'A production-ready full-stack PvP team-building platform with a Build page for team creation, a Dex for game data, and a Teams page for saving and loading builds. Applied advanced algorithms and LLM-powered analysis to deliver real-time synergy recommendations with low latency.',
+    stack: ['React', 'TypeScript', 'Tailwind CSS', 'FastAPI', 'SQLAlchemy', 'PostgreSQL', 'Redis', 'Pytest', 'Docker', 'GitHub Actions', 'AWS'],
+    impact:
+      'A production-ready full-stack PvP team-building web app with a Build page, Dex, and Teams page. Features a battle analysis engine, LLM-powered recommendations with 75% latency reduction via async batching, deployed on AWS EC2, CloudFront, and RDS.',
     bullets: [
-      '10+ relational data model',
+      '13-model schema, 12 ETL pipelines',
       '8-metric battle analysis',
-      'LLM-assisted trait-move synergy',
-      '75% latency reduction (async)',
+      'LLM-assisted team analysis',
+      'Redis cache w/ stampede protection',
+      'Docker builds, ECR push',
+      'EC2 via SSM, S3/CloudFront sync',
+      '5-tier JWT auth, bcrypt, rate limiting',
       'Internationalization (EN + CN)',
     ],
     links: {
-      github: 'https://github.com/HaotingShen/roco-kingdom-team-builder',
-      // website: 'https://your-live-site.example/roco-kingdom-team-builder'
+      // github: 'https://github.com/HaotingShen/roco-kingdom-team-builder',
+      website: 'https://rkteambuilder.com'
     },
     tags: ['Full-stack', 'Game tools'],
-    cover: `${base}covers/roco.png`
+    cover: `${base}covers/roco.png`,
+    coverFit: 'contain'
   },
   {
     title: 'FrogHire.ai — Job Search Extension',
@@ -48,7 +52,7 @@ export const projects: Project[] = [
     title: 'Bolland International Website',
     year: '2024',
     timeframe: 'June 2024 - Aug 2024',
-    stack: ['React', 'TypeScript', 'Tailwind', 'Node.js', 'Google Analytics'],
+    stack: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Google Analytics'],
     impact:
       'Designed and deployed the official corporate website with responsive UI and SEO optimization. Delivered measurable business impact through faster load times and improved customer engagement.',
     bullets: [
