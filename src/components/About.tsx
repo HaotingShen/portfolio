@@ -18,9 +18,10 @@ export default function About() {
         >
           I'm a recent CS graduate from Washington University in St. Louis, focused on backend development and AI engineering.
           Most recently, I interned at Eth Tech building a RAG-based knowledge assistant with LangChain and OpenAI over 500+
-          internal documents, deployed on AWS ECS Fargate. I've also shipped FrogHire.ai — a job-search Chrome extension with
-          40,000+ active users, built SEO-optimized websites for companies, and worked on full-stack production apps on AWS.
-          I bring a combination of backend engineering, LLM integration, and cloud infrastructure expertise to every project.
+          internal documents, deployed on AWS ECS Fargate. Outside of internships, I've independently shipped products at scale —
+          including Roco Kingdom Team Builder, a full-stack PvP web app with 50,000+ daily active users, and FrogHire.ai, a
+          job-search Chrome extension with 40,000+ active users. I bring a combination of backend engineering, LLM integration,
+          and cloud infrastructure expertise to every project.
         </motion.p>
 
         {/* Skills grid */}

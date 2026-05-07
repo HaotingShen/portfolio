@@ -6,10 +6,10 @@ export const projects: Project[] = [
   {
     title: 'Roco Kingdom Team Builder App',
     year: '2025',
-    timeframe: 'June 2025 - Present (Open Source)',
+    timeframe: 'June 2025 - Present',
     stack: ['React', 'TypeScript', 'Tailwind CSS', 'FastAPI', 'SQLAlchemy', 'PostgreSQL', 'Redis', 'Pytest', 'Docker', 'GitHub Actions', 'AWS'],
     impact:
-      'A production-ready full-stack PvP team-building web app with a Build page, Dex, and Teams page. Features a battle analysis engine, LLM-powered recommendations with 75% latency reduction via async batching, deployed on AWS EC2, CloudFront, and RDS.',
+      'A full-stack PvP team-building web app with 50,000+ daily active users. Features a Build page, Dex, and Teams page, a battle analysis engine, LLM-powered recommendations with 75% latency reduction via async batching, deployed on AWS EC2, CloudFront, and RDS.',
     bullets: [
       '13-model schema, 12 ETL pipelines',
       '8-metric battle analysis',
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     timeframe: 'May 2023 - Aug 2023',
     stack: ['Python', 'NLP', 'Regex', 'spaCy', 'Pytest', 'Chrome Extension'],
     impact:
-      'A browser extension powering a job-search assistant with 50,000+ active users. Leveraged NLP pipelines to accurately extract sponsorship data, degree and work requirements, and key skills, continuously refined through user feedback.',
+      'A browser extension powering a job-search assistant with 40,000+ active users. Leveraged NLP pipelines to accurately extract sponsorship data, degree and work requirements, and key skills, continuously refined through user feedback.',
     bullets: [
       'Cross-platform job search',
       'spaCy NLP pipeline',
