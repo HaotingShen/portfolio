@@ -27,14 +27,22 @@ export default function ProjectCard(p: Project){
       className="group rounded-2xl bg-surface/60 border ui-border p-0 shadow-soft hover:shadow-lg hover:shadow-black/40 transition overflow-hidden"
     >
       {p.cover && (
-        <div className={`relative h-80 w-full overflow-hidden flex items-center justify-center border-b ui-border ${p.coverFit === 'contain' ? 'bg-surface' : ''} ${p.links.website ? 'cursor-pointer' : ''}`}
-          onClick={() => p.links.website && window.open(p.links.website, '_blank', 'noopener,noreferrer')}
-        >
-          <img
-            src={p.cover}
-            alt={p.title}
-            className={`transition-transform duration-700 group-hover:scale-105 ${p.coverFit === 'contain' ? 'h-52 w-52 object-contain' : 'h-full w-full object-cover'}`}
-          />
+        <div className={`relative h-80 w-full overflow-hidden flex items-center justify-center border-b ui-border ${p.coverFit === 'contain' ? 'bg-surface' : ''}`}>
+          {p.links.website ? (
+            <a href={p.links.website} target="_blank" rel="noopener noreferrer" className="block h-full w-full flex items-center justify-center">
+              <img
+                src={p.cover}
+                alt={p.title}
+                className={`transition-transform duration-700 group-hover:scale-105 ${p.coverFit === 'contain' ? 'h-52 w-52 object-contain' : 'h-full w-full object-cover'}`}
+              />
+            </a>
+          ) : (
+            <img
+              src={p.cover}
+              alt={p.title}
+              className={`transition-transform duration-700 group-hover:scale-105 ${p.coverFit === 'contain' ? 'h-52 w-52 object-contain' : 'h-full w-full object-cover'}`}
+            />
+          )}
         </div>
       )}
 
